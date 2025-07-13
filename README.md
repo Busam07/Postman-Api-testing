@@ -1,10 +1,40 @@
-Postman API Testing
-The Postman API Testing project is focused on automating and validating RESTful API endpoints using Postman. 
-It involves creating test collections for different HTTP methods, including GET, POST, PUT, and DELETE, to ensure the functionality, performance, and reliability of APIs.
-The project demonstrates how to perform essential tests such as checking status codes, validating content types, asserting response bodies, and measuring response times.
+# API Testing Project – Reqres API (Postman + Newman )
 
-It provides a structured approach to test APIs in both manual and automated ways.
-Users can run tests directly in the Postman interface or automate them using Newman, the Postman CLI tool, for integration with continuous integration (CI) pipelines.
+This project automates the testing of public APIs from [Reqres.in](https://reqres.in/) using Postman and Newman. It validates key API endpoints (GET, POST, PUT, DELETE).
 
-With reusable collections and environments, this project simplifies the process of API testing, making it easy for developers and QA engineers to validate APIs efficiently.
-The goal is to ensure that APIs are reliable and meet expected behavior across different use cases.
+---
+
+## 🔧 Tools & Technologies
+- **Postman** – API request and test automation
+- **Newman** – CLI tool to run Postman collections
+- **JSON** – For request payload and schema
+- **GitHub** – Version control
+
+---
+
+## ✅ Test Coverage
+- `GET /users?page=2` – List users
+- `GET /users/{id}` – Single user details
+- `POST /users` – Create a user
+- `PUT /users/{id}` – Update user data
+- `DELETE /users/{id}` – Delete a user
+
+Includes:
+- Status code validation
+- Response body structure validation
+- Schema checks
+- Edge-case scenarios
+
+---
+
+## 🚀 How to Run Tests
+
+### 🔹 Run via Postman GUI
+1. Import the `Reqres.postman_collection.json` into Postman.
+2. Click "Run" using the Collection Runner.
+3. Review test results and response validations.
+
+### 🔹 Run via Newman CLI
+Make sure you have Node.js + Newman installed:
+```bash
+npm install -g newman
